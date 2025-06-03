@@ -1,0 +1,46 @@
+CPU: Intel Core i5-8400 (Coffee Lake)
+GPU: Intel UHD Graphics 630
+RAM: 16 GB
+Motherboard: Gigabyte B360 AORUS Gaming 3-CF
+Audio Codec: Realtek
+WiFi: TP Link TL-WN823N / Tenda AX300 Wireless USB Adapter
+Bluetooth: Baseus BA07
+
+- Helper Notes
+
+- https://github.com/shiruken/hackintosh/blob/master/README.md
+- https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md#intel-uhd-graphics-610-655-coffee-lake-and-comet-lake-processors
+- Platform ID: 0x3E9B0007 (recommended)
+- Bootars: -v debug=0x100 alcid=1 agdpmod=pikera
+- Bootars Debug: -v debug=0x100 keepsyms=1 igfxonln=1 -igfxvesa
+
+***********************************************************************************************************************************************************************
+Boot flag to enable HDMI —> agdpmod=vit9696
+***********************************************************************************************************************************************************************
+
+
+***********************************************************************************************************************************************************************
+Bios
+***********************************************************************************************************************************************************************
+===== Disable =====
+Fast Boot
+Secure Boot
+Serial/COM Port
+Parallel Port
+VT-d (can be enabled if you set DisableIoMapper to YES)
+Compatibility Support Module (CSM) (Must be off in most cases, GPU errors/stalls like gIO are common when this option is enabled)
+Thunderbolt (For initial install, as Thunderbolt can cause issues if not setup correctly)
+Intel SGX
+Intel Platform Trust
+CFG Lock (MSR 0xE2 write protection)(This must be off, if you can't find the option then enable AppleXcpmCfgLock under Kernel -> Quirks. Your hack will not boot with CFG-Lock enabled)
+
+
+===== Enable =====
+VT-x
+Above 4G Decoding (*** May disable it, enabling it might arise igpu stuck issue on boot ***)
+Hyper-Threading
+Execute Disable Bit
+EHCI/XHCI Hand-off
+OS type: Windows 8.1/10 UEFI Mode (some motherboards may require "Other OS" instead)
+DVMT Pre-Allocated(iGPU Memory): 64MB or higher
+SATA Mode: AHCI
