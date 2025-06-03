@@ -5,46 +5,40 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleGetInfoString</key>
-	<string>v1.0</string>
+	<string>v1.1</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.corpnewt.USBMap</string>
+	<string>com.dhinakg.USBToolBox.map</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>USBMap</string>
+	<string>UTBMap</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>iMac19,1-XHC</key>
+		<key>XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.dhinakg.USBToolBox.kext</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
-			<key>IOParentMatch</key>
-			<dict>
-				<key>IOPropertyMatch</key>
-				<dict>
-					<key>pcidebug</key>
-					<string>0:20:0</string>
-				</dict>
-			</dict>
+			<string>USBToolBox</string>
+			<key>IOMatchCategory</key>
+			<string>USBToolBox</string>
+			<key>IONameMatch</key>
+			<string>XHC</string>
 			<key>IOProviderClass</key>
-			<string>AppleIntelCNLUSBXHCI</string>
+			<string>IOPCIDevice</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
-				<key>kUSBMuxEnabled</key>
-				<true/>
 				<key>port-count</key>
 				<data>
-				DgAAAA==
+				FgAAAA==
 				</data>
 				<key>ports</key>
 				<dict>
@@ -56,25 +50,21 @@
 						<data>
 						AQAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Rear5</string>
 					</dict>
 					<key>HS02</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>8</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						AgAAAA==
 						</data>
-						<key>Comment</key>
-						<string>RearUSB-C</string>
 					</dict>
 					<key>HS03</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>3</integer>
-						<key>#port</key>
+						<key>port</key>
 						<data>
 						AwAAAA==
 						</data>
@@ -83,7 +73,7 @@
 					<dict>
 						<key>UsbConnector</key>
 						<integer>3</integer>
-						<key>#port</key>
+						<key>port</key>
 						<data>
 						BAAAAA==
 						</data>
@@ -96,8 +86,6 @@
 						<data>
 						BQAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Rear3</string>
 					</dict>
 					<key>HS06</key>
 					<dict>
@@ -107,8 +95,6 @@
 						<data>
 						BgAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Rear4</string>
 					</dict>
 					<key>HS07</key>
 					<dict>
@@ -118,8 +104,6 @@
 						<data>
 						BwAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Front1</string>
 					</dict>
 					<key>HS08</key>
 					<dict>
@@ -129,8 +113,6 @@
 						<data>
 						CAAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Front2</string>
 					</dict>
 					<key>HS09</key>
 					<dict>
@@ -140,8 +122,6 @@
 						<data>
 						CQAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Rear2</string>
 					</dict>
 					<key>HS10</key>
 					<dict>
@@ -151,25 +131,21 @@
 						<data>
 						CgAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Rear1</string>
 					</dict>
 					<key>HS11</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>255</integer>
+						<integer>0</integer>
 						<key>port</key>
 						<data>
 						CwAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Rear6</string>
 					</dict>
 					<key>HS12</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>0</integer>
-						<key>#port</key>
+						<key>port</key>
 						<data>
 						DAAAAA==
 						</data>
@@ -178,7 +154,7 @@
 					<dict>
 						<key>UsbConnector</key>
 						<integer>0</integer>
-						<key>#port</key>
+						<key>port</key>
 						<data>
 						DQAAAA==
 						</data>
@@ -186,28 +162,92 @@
 					<key>HS14</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>255</integer>
+						<integer>0</integer>
 						<key>port</key>
 						<data>
 						DgAAAA==
 						</data>
-						<key>Comment</key>
-						<string>Rear7</string>
 					</dict>
 					<key>HS15</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>255</integer>
-						<key>#port</key>
+						<key>port</key>
 						<data>
 						DwAAAA==
 						</data>
 					</dict>
+					<key>HS16</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>255</integer>
+						<key>port</key>
+						<data>
+						EAAAAA==
+						</data>
+					</dict>
+					<key>SS01</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						EQAAAA==
+						</data>
+					</dict>
+					<key>SS02</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						EgAAAA==
+						</data>
+					</dict>
+					<key>SS03</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						EwAAAA==
+						</data>
+					</dict>
+					<key>SS04</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						FAAAAA==
+						</data>
+					</dict>
+					<key>SS05</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						FQAAAA==
+						</data>
+					</dict>
+					<key>SS06</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						FgAAAA==
+						</data>
+					</dict>
 				</dict>
 			</dict>
-			<key>model</key>
-			<string>iMac19,1</string>
 		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.dhinakg.USBToolBox.kext</key>
+		<string>1.0.0</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
